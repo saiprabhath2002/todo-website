@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title>edit</title>
+{% endblock%}
+
+{% block body %}
+
+<hr>
+<h2>Edit : </h2>
+<form action="/post/edit/{{post.id}}/{{post.author2}}" method="POST">
+    <div class="input-group mb-3">
+        <div class="input-group-prepend">
+            <span class="input-group-text" id="basic-addon1">Title : </span>
+            <input type="text" class="form-control" placeholder="Title" aria-label="Username" aria-describedby="basic-addon1" name='title',id='title' value="{{post.title}}">
+        </div>
+    </div>
+    <div class="input-group mb-3">
+        <div class="input-group-prepend">
+            <span class="input-group-text" id="basic-addon1">Post : </span>
+            <input type="text" class="form-control" placeholder="Content" aria-label="Username" aria-describedby="basic-addon1" name='content',id='content' value="{{post.content}}" >
+        </div>
+    </div>
+    <div class="input-group mb-3">
+        <div class="input-group-prepend">
+            <span class="input-group-text" id="basic-addon1">Author : </span>
+            <input type="text" class="form-control" placeholder="Author" aria-label="Username" aria-describedby="basic-addon1" name='author',id='author' value="{{post.author2}}">
+        </div>
+    </div>
+    <input type="submit" value="Save" class="btn btn-outline-success">
+</form>
+<hr>
+{% endblock%}

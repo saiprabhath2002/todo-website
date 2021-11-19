@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title>login</title>
+{% endblock%}
+
+{% block body %}
+<h1>Login:</h1>
+<form action="/submit" method="POST">
+    <div class="input-group mb-3">
+        <div class="input-group-prepend">
+            <span class="input-group-text" id="basic-addon1">username : </span>
+            <input type="text" class="form-control" placeholder="username" aria-label="Username" aria-describedby="basic-addon1" name='user',id='user'>
+        </div>
+    </div>
+    <div class="input-group mb-3">
+        <div class="input-group-prepend">
+            <span class="input-group-text" id="basic-addon1">password : </span>
+            <input type="password" class="form-control" placeholder="Password" aria-label="Username" aria-describedby="basic-addon1" name='password',id='password' >
+        </div>
+    </div>
+    <br>
+    <input type="submit" value="Login" class="btn btn-success" >
+
+</form>
+{% endblock%}
